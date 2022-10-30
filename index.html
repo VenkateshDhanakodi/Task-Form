@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - FORM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div id="all-content">
+        <h1 id="title">DOM Manipulation with Forms</h1>
+        <form id="form">
+            <div id="all-details">
+                <div id="fullname" class="form-group">
+                    <div class="input-box">
+                        <span class="heading">Firstname</span>
+                        <input type="text" name="first-name"id="first-name" placeholder="First name" required/>
+                    </div>
+                    <div class="input-box">
+                        <span class="heading">Lastname</span>
+                        <input type="text" name="lastname" id="last-name" placeholder="Last name" required/>
+                    </div>
+                </div>
+
+                <div class="address-box form-group">
+                    <span class="heading">Address </span>
+                    <textarea name="address" id="address" class="form-control" textarea placeholder="Apartment/Floor, Street, City" required></textarea>
+                </div>
+
+                <div class="gender-box form-group">
+                    <label for="Gender">Gender</label>
+                    <input type="radio" name="gender" onclick="radio(this)" id="male"value="male" required>
+                    <label for="gender">Male  </label>
+                    <input type="radio" name="gender" onclick="radio(this)" id="female"value="female" required>
+                    <label for="gender">Female  </label>
+                    <input type="radio" name="gender" onclick="radio(this)" id="other"value="other" required>
+                    <label for="gender">Other  </label>
+                </div>
+
+                <div id="state-pin" class="form-group">
+                    <div class="input-box">
+                        <span class="heading">State</span>
+                        <input type="text" name="state"id="state" placeholder="Enter your state name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="heading">Pincode</span>
+                        <input type="text" name="pincode" id="pincode" pattern="[0-9]{6}" min="111111" max="999999" placeholder="6 Digit pincode" required>
+                    </div>
+                </div>
+
+                <div id="country-food" class = "form-group">
+                    <div class="input-box">
+                        <span class="heading">Country</span>
+                        <input type="text" name="country" id="country" placeholder="Enter your country" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="choice of food">Choice of food </label>
+                        <select name="choice of food" id="food-choice" placeholder="Select the food">
+                            <option value="naan">naan</option>
+                            <option value="idli">idli</option>
+                            <option value="dhosa">dhosa</option>
+                            <option value="chicken">chicken</option>
+                            <option value="mutton">mutton</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="submit" class="btn btn-primary">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>  
+    <div id="table">
+        <table class="table table-dark table-responsive">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">firstname</th>
+                    <th scope="col">lastname</th>
+                    <th scope="col">address</th>
+                    <th scope="col">pincode</th>
+                    <th scope="col">gender</th>
+                    <th scope="col">food</th>
+                    <th scope="col">state</th>
+                    <th scope="col">country</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <p id="description">The Registration form designed for capturing Registration info in table with responsiveness</p>
+    </div>  
+    <script src="script.js"></script>
+    <script src = "https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>

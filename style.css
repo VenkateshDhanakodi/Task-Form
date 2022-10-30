@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #B2B2B2, #B2B2B2);
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    gap: 2em;
+}
+#all-content{
+    max-width: 700px;
+    width: 100%;
+    background-color: #5837D0;
+    padding: 25px 38px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    color: white;
+    margin-top: 1em;
+}
+#table{
+  max-width: flex1;
+  width: 750px;
+  margin: 0 2em;
+  width: 100%;
+  padding: 25px 38px;
+  border-radius: 5px;
+  height: auto;
+  text-transform: capitalize;
+  text-align: center;
+}
+#title{
+    font-size:x-large;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;
+}
+#all-content #form #all-details #fullname,
+#all-content #form #all-details #state-pin,
+#all-content #form #all-details #country-food
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 12px 0;
+}
+#all-details #fullname .input-box,
+#all-details #state-pin .input-box,
+#all-details #country-food .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+#all-details .input-box input,
+#all-details .input-box select,
+#all-details .address-box textarea{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+#all-details .input-box span.heading,
+#all-details .input-box label,
+#all-details .address-box .heading{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: large;
+}
+#all-details .gender-box label[for="Gender"]{
+    font-weight: 500;
+    font-size: large;
+    color: white;
+}
+#all-details .address-box #address,
+#all-details .gender-box
+{
+  display: inline-block;
+  width: 100%;    
+}
+#form .gender-box{
+  display: flex;
+  width: 80%;
+  margin: 20px 0 3px 0;
+  justify-content: space-between;
+}
+#form .gender-box label{
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+#male,#female,#other{
+  cursor: pointer;
+}
+#form #submit.btn{
+  display: flex;
+  background: linear-gradient(#001253, #000A31);
+  width: 25%;
+  justify-content: center;
+  margin: 0 auto;
+}
+#form #submit.btn input{
+  height: 100%;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+#description{
+  font-weight: 500;
+  text-align: center;
+}
+@media(max-width: 650px){
+  #all-content{
+  max-width: 100%;
+  }
+  #form #all-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+  }
+  #form .gender-box{
+    width: 100%;
+  }
+#form #fullname,
+#form #state-pin,
+#form #country-food{
+    flex-direction: column;
+}
+#form .form-group input{
+  width: 100%;
+  justify-content: flex-start;
+}
+#all-content #all-details .gender-box{
+  flex-direction: column;
+}
+}
+
+@media(max-width: 1000px){
+  #table{
+    margin: 0;
+    padding: 25px 0;
+    width: 98%;
+    overflow-x: scroll;
+  }
+  #form #submit.btn{
+    width: 156px;
+  }
+  #form #submit.btn input{
+    width: 100%;
+  }
+}
